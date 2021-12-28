@@ -35,6 +35,7 @@ class MyFirstEc2(core.Stack):
 			machine_image=ec2.MachineImage.latest_amazon_linux(),#osと似たようなもの
 			vpc=vpc,
 			vpc_subnets = ec2.SubnetSelection(subnet_type=ec2.SubnetType.PUBLIC),
+
 			security_group = sg,
 			key_name = key_name,
 		)
